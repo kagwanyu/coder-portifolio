@@ -40,9 +40,13 @@ span{
     display:flex;
     transition: background-color 0.4s ease-in-out;
 }
-header .scrolled{
+header.scrolled{
     background-color: white;
     opacity: 0.98;
+    color: var(white);
+    
+    padding: .05px;
+
 }
 .header .logo{
     color: var(--text-color);
@@ -51,6 +55,11 @@ header .scrolled{
     font-size: 2.5rem;
     font-weight: 600;
     background-color:var(--shadow-color);
+}
+.header .logo .scrolled{
+    background-color: white;
+    color: black;
+    margin: .5rem;
 }
 .logo span{
     color:var(--main-color);
@@ -67,10 +76,20 @@ header .scrolled{
         transition: 0.4s ease-in-out;
 
     }
-    header .navbar a .scrollY{
-        color: black;
-        background-color: white;
-    }
+   .navbar a.scrolled{
+    color: black;
+
+   }
+   header {
+    transition: background-color 0.3s, margin-top 0.3s, color 0.3s; /* Add smooth transitions */
+  }
+  
+  header.scrolled {
+    background-color: white;
+    margin-top: 10px; /* Adjust the margin value as needed */
+    color: black;
+  }
+  
     .navbar a:hover{
     color:var(--main-color);
     }
@@ -170,9 +189,9 @@ header .scrolled{
    .btn {
     color:var(--text-color);
     border-top: 2.6rem;
-    margin-top: 2.6rem;
+    margin-top: 2.0rem;
     display: inline-block;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.2rem;
     background: var(--main-color);
     border-radius: .6rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
@@ -195,7 +214,7 @@ header .scrolled{
   }
   .services{
     min-height: 50vh;
-    margin-top:-20rem;
+    margin-top:-18.5rem;
     position:relative;
   }
   .services h1{
@@ -236,7 +255,7 @@ font-size: 1.7rem;
    }
    
    .row{
-    /* position: relative; */
+    position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
@@ -247,7 +266,7 @@ font-size: 1.7rem;
     display: block;
     transition: transform 0.5;
    }
-   .layer{
+   /* .layer{
     width: 100%;
     height: 0;
     position: absolute;
@@ -266,7 +285,7 @@ font-size: 1.7rem;
    
     
     
-   }
+   } */
    .layer h5{
     color: var(--text-color);
     margin-bottom: 5.3rem;

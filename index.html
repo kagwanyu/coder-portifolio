@@ -7,21 +7,22 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- <link rel="script" href="./script.js"> -->
 
 <body>
     
     <header class="header">
         <a href="#" class="logo">Cor<span>d</span>er.</a>
     <nav class="navbar">
-        <a href="#" class="active"> Home</a>
-        <a href="#">About me</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
+        <a id="home-link" href="#" class="active"> Home</a>
+        <a id="about-link" href="#">About me</a>
+        <a id="services-link" href="#">Services</a>
+        <a id="portfolio-link" href="#">Portfolio</a>
+        <a id="contact-link" href="#">Contact</a>
 
     </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home-section">
         <h3>
             Hello I'm 
         </h3>
@@ -37,7 +38,7 @@
         
 
     </section>
-    <section class="about">
+    <section class="about" id="about-section">
         <div class="about-image">
             <img src="about-image.png" alt="">
     
@@ -60,7 +61,7 @@
       
 
      </section>
-     <section class="services">
+     <section class="services" id="services-section">
         <h1>My <span>services</span></h1>
        <div class="service-content">
         <div  class="se">
@@ -100,7 +101,7 @@
 
 
      </section>
-     <section class="portfolio">
+     <section class="portfolio" id="portfolio-section">
         <h1>Latest <span>Projects</span></h1>
         <div class="portfolio-box">
             <div class="row">
@@ -148,7 +149,7 @@
           
 
      </section>
-     <section class="Contact">
+     <section class="Contact" id="contact-section">
         <div class="contact-text">
             <h2>
                 Contact <span>Me!</span>
@@ -179,17 +180,88 @@
 
                 </div>        
      </section>
-     <script type="text/javascript">
-       Document.addEventListener('scroll', () => {
-       var header = document.querySelector("header");
-        if(window-scrollY > 0){
-            header.classList-add('scrolled');
-        }
-        else{
-            header.classList.remove('scrolled')
-        }
-       })
-       
-     </script>
+     
+    <!-- //    Document.addEventListener('scroll', () => {
+    //    var header = document.querySelector("header");
+    //     if(window-scrollY > 0){
+    //         header.classList-add('scrolled');
+    //         console.log('scrolled')
+    //     }
+    //     else{
+    //         header.classList.remove('scrolled')
+    //     }
+    //    })
+    // console.log ('hello world')
+//     document.addEventListener('scroll', () => {
+//   const header = document.querySelector("header");
+//   if (window.scrollY > 0) {
+//     header.classList.add('scrolled');
+//     console.log('Scrolled');
+//   } else {
+//     header.classList.remove('scrolled');
+//   }
+// }); -->
+<!-- <link rel="script" href="./script.js"> -->
+<script>
+    document.addEventListener('scroll', () => {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+      console.log('Scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  document.addEventListener('scroll', () => {
+    const navbar = document.querySelector("navbar");
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+      console.log('Scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  // Get the navigation links
+const homeLink = document.querySelector('#home-link');
+const aboutLink = document.querySelector('#about-link');
+const servicesLink = document.querySelector('#services-link');
+const portfoliolink = document.querySelector('#portfolio-link');
+const contactLink = document.querySelector('#contact-link');
+
+// Get the target sections
+const homeSection = document.querySelector('#home-section');
+const aboutsection = document.querySelector('#about-section');
+const servicessection = document.querySelector('#services-section');
+const portfoliosection = document.querySelector('#portfolio-section');
+const contactsection = document.querySelector('#contact-section');
+
+
+// Function to scroll to a section
+function scrollToSection(section) {
+  section.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Add click event listeners to the navigation links
+homeLink.addEventListener('click', () => {
+  scrollToSection(homeSection);
+});
+
+aboutlink.addEventListener('click', () => {
+  scrollToSection(aboutsection);
+});
+
+serviceslink.addEventListener('click', () => {
+  scrollToSection(servicesection);
+});
+portfoliolink.addEventListener('click', () => {
+  scrollToSection(portfoliosection);
+});
+contactlink.addEventListener('click', () => {
+  scrollToSection(contactsection);
+});
+
+</script>
+
+     
 </body>
 </html>
