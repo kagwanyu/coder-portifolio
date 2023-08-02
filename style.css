@@ -12,7 +12,7 @@
     color: var(--text-color);
 }
 :root{
-    --bg-color:rgb(17, 15, 15);
+    --bg-color:rgb(0, 0, 2);
     --shadow-color:rgb(0, 0, 2);
     --text-color:white;
     --main-color:rgb(172, 119, 21);
@@ -32,63 +32,56 @@ span{
     margin: 0;
     padding: 0;
     position:sticky;
-    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
     right: 0;
     top: 0;
+    padding:2px;
     align-items: center;
     z-index: 100; 
     display:flex;
     transition: background-color 0.4s ease-in-out;
 }
-header.scrolled{
-    background-color: white;
-    opacity: 0.98;
-    color: var(white);
-    
-    padding: .05px;
 
-}
 .header .logo{
     color: var(--text-color);
     margin-right:auto;
     padding:2.5rem 7%;
-    font-size: 2.5rem;
+    font-size: 1.77rem;
     font-weight: 600;
-    background-color:var(--shadow-color);
+    background-color: var(--shadow-color);
+    
 }
-.header .logo .scrolled{
+/* header.scrolled{
+    background-color:transparent;
+    opacity: 0.98;
+    color: var(white);
+    
+    padding: .05px; */
+
+
+/* .header .logo .scrolled{
     background-color: white;
     color: black;
-    margin: .5rem;
-}
+    margin: .5rem; */
+
 .logo span{
     color:var(--main-color);
 }
     
-    .navbar a{
+    header .navbar a{
         color: var(--text-color);
         margin-right: 3.5rem;
         font-weight: 500;
         right: 0;
-        background-color: var(--shadow-color);
+        
         position: relative;
         transition: .5 ease;
         transition: 0.4s ease-in-out;
 
     }
-   .navbar a.scrolled{
-    color: black;
-
-   }
-   header {
-    transition: background-color 0.3s, margin-top 0.3s, color 0.3s; /* Add smooth transitions */
-  }
   
-  header.scrolled {
-    background-color: white;
-    margin-top: 10px; /* Adjust the margin value as needed */
-    color: black;
-  }
+  
   
     .navbar a:hover{
     color:var(--main-color);
@@ -143,12 +136,14 @@ header.scrolled{
     border-radius: 50%;
     justify-content: center;
     width: 630px;
-    height: 630px;
-    margin-top:5.0rem;
+    height: 600px;
+    margin-top:10rem;
+    margin-left: 3.5rem;
     border: 2.0rem;
     border-color: orange;
     border: 2.5rem orange 2.5rem aqua 2.5rem ;
     box-shadow:var(--shadow-color) ;
+    
   }
 
     
@@ -187,19 +182,19 @@ header.scrolled{
    }
  
    .btn {
-    color:var(--text-color);
+    color:black;
     border-top: 2.6rem;
     margin-top: 2.0rem;
     display: inline-block;
     padding: 1.2rem 1.2rem;
-    background: var(--main-color);
+    background:white;
     border-radius: .6rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
-    color: var(--text-color);
+    
     letter-spacing: .1rem;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 600;
-    border: .2rem solid transparent;
+    border: .2rem solid black;
     transition: .5s ease;
 
    }
@@ -266,7 +261,7 @@ font-size: 1.7rem;
     display: block;
     transition: transform 0.5;
    }
-   /* .layer{
+   .layer{
     width: 100%;
     height: 0;
     position: absolute;
@@ -285,10 +280,11 @@ font-size: 1.7rem;
    
     
     
-   } */
+   } 
    .layer h5{
     color: var(--text-color);
-    margin-bottom: 5.3rem;
+    position: relative;
+    margin-top: -5.3rem;
     background: transparent;
     justify-content: center;
 
@@ -298,6 +294,11 @@ font-size: 1.7rem;
     margin-bottom: 5.5rem;
     background: transparent;
     justify-content: center;
+   }
+   .layer a{
+    font-size: 40px;
+    background-color: transparent;
+    color: white;
    }
    .row img:hover{
     transition: scale(1.1);
